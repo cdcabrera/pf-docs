@@ -39,6 +39,9 @@
     "roots": [
       "src"
     ],
+    "moduleNameMapper": {
+      "client-routes": "<rootDir>/tests/__mocks__/fileMock.js"
+    },
     "coverageThreshold": {
       "global": {
         "branches": 50,

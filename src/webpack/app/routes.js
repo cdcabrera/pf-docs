@@ -73,7 +73,7 @@ export const setGroupedRoutes = (routes = clientRoutes) => {
 
       if (section) {
         updatedAccum[section] = accum[section] || {};
-        updatedAccum[section][id] = accum[section][id] || {
+        updatedAccum[section][id] = accum?.[section]?.[id] || {
           id,
           section,
           title,

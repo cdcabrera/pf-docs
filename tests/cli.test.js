@@ -1,1 +1,1 @@
-describe('CLI', () => {});
+describe('CLI', () => {})
