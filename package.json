@@ -27,30 +27,13 @@
     "cli:serve": "./bin/cli.js serve",
     "cli:watch": "./bin/cli.js watch",
     "test": "run-s -l test:lint test:ci",
-    "test:ci": "export CI=true; jest --collectCoverage --passWithNoTests",
+    "test:ci": "export CI=true; export NODE_ENV=test; jest --collectCoverage",
     "test:clearCache": "jest --clearCache",
     "test:deps": "run-s test",
-    "test:dev": "eslint ./src; jest --watch",
+    "test:dev": "export NODE_ENV=test; jest --roots=./ --watch",
     "test:integration": "jest --roots=./tests",
     "test:integration-dev": "jest --roots=./tests --watchAll",
     "test:lint": "eslint ./src ./bin"
-  },
-  "jest": {
-    "roots": [
-      "src"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
-      }
-    },
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/logger/*"
-    ]
   },
   "standard-version": {
     "skip": {
@@ -153,6 +136,9 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
+    "babel-jest": "^28.1.0",
     "eslint": "8.14.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-esnext": "^4.1.0",
@@ -169,7 +155,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "jest": "^28.0.3",
+    "jest": "28.0.3",
+    "jest-environment-jsdom": "28.1.0",
+    "jest-resolve": "28.1.0",
+    "jest-watch-typeahead": "1.1.0",
     "nodemon": "^2.0.16",
     "npm-check-updates": "^12.5.11",
     "npm-run-all": "^4.1.5",
