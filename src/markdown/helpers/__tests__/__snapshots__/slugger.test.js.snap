@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slugger should makeSlug: makeSlug 1`] = `"/ipsum-section/dolor-id/Lorem source"`;
+
+exports[`Slugger should slugger: slugger 1`] = `"lorem-ipsumdolor-sit"`;

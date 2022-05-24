@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiveCodeTypes should return a specific list: list 1`] = `
+Array [
+  "js",
+  "ts",
+  "html",
+]
+`;
