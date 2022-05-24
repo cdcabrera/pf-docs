@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from '@reach/router';
 import { Footer } from '../footer/footer';
 
-export const AppRoute = ({ child, katacodaLayout, title }) => {
+export const AppRoute = ({ child, katacodaLayout, title, hasFooter = process.env.hasFooter }) => {
   const location = useLocation();
 
   if (window?.gtag) {
@@ -15,7 +15,7 @@ export const AppRoute = ({ child, katacodaLayout, title }) => {
   return (
     <React.Fragment>
       {child}
-      {!katacodaLayout && process.env.hasFooter && <Footer />}
+      {!katacodaLayout && hasFooter && <Footer />}
     </React.Fragment>
   );
 };
