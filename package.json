@@ -108,7 +108,7 @@
     "detab": "^2.0.4",
     "fs-extra": "^10.1.0",
     "glob": "^8.0.1",
-    "hast-to-hyperscript": "^9.0.1",
+    "hast-to-hyperscript": "^10.0.1",
     "hast-util-to-text": "^2.0.1",
     "html-webpack-plugin": "^5.5.0",
     "js-yaml": "^4.1.0",
